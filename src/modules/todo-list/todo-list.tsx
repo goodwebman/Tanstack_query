@@ -1,25 +1,9 @@
-import { useInfiniteQuery } from "@tanstack/react-query"
-import { useCallback, useRef, useState } from "react"
-import { todoListApi } from "./api"
+import { useCreateTodo } from "./useCreateTodo";
+import { useTodoList } from "./useTodoList";
 
 const TodoList = () => {
-  const [enabled, setEnabled] = useState(false);
-  const {
-    data: todoItems,
-    error,
-    isLoading,
-    isPlaceholderData,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage
-  } = useInfiniteQuery({
-    ...todoListApi.getListsInfinityQueryOptions(),
-    enabled: enabled
-  });
-
-  const cursorRef = useIntersection(() => {
-    fetchNextPage();
-  });
+  const { error, isLoading, todoItems } = useTodoList();
+  const { handleCreate } = useCreateTodo();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -31,47 +15,25 @@ const TodoList = () => {
 
   return (
     <div className="p-5 mx-auto max-w-[1200px] mt-10 ">
+      
       <h1 className="text-3xl font-bold underline mb-5">TodoList</h1>
-      <button className="pb-5" onClick={() => setEnabled(e => !e)}>
-        Toggle enabled
-      </button>
-      <div
-        className={
-          `flex flex-col gap-4` + (isPlaceholderData ? " opacity-50" : "")
-        }
-      >
+      <form className="flex gap-2 mb-5"  onSubmit={handleCreate}>
+        <input
+          className="rounded p-2 border border-teal-500"
+          type="text"
+          name="text"
+        />
+        <button type="submit" className="rounded p-2 border border-teal-500">Создать</button>
+      </form>
+      <div className={`flex flex-col gap-4`}>
         {todoItems?.map(todo => (
           <div className="border border-slate-300 rounded p-3 " key={todo.id}>
             {todo.text}
           </div>
         ))}
       </div>
-      <div className="flex gap-2 mt-4" ref={cursorRef}>
-        {!hasNextPage && <div>Нет данных для загрузки</div>}
-        {isFetchingNextPage && <div>...Loading</div>}
-      </div>
     </div>
   );
 };
-
-// eslint-disable-next-line react-refresh/only-export-components
-export function useIntersection(onIntersect: () => void) {
-  const unsubscribe = useRef(() => {});
-  return useCallback((el: HTMLDivElement | null) => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(intersection => {
-        if (intersection.isIntersecting) {
-          onIntersect();
-        }
-      });
-    });
-    if (el) {
-      observer.observe(el);
-      unsubscribe.current = () => observer.disconnect();
-    } else {
-      unsubscribe.current();
-    }
-  }, []);
-}
 
 export default TodoList;

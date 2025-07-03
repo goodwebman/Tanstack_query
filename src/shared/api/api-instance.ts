@@ -5,9 +5,23 @@ class ApiError extends Error {
     super("ApiError: " + response.status);
   }
 }
-export const jsonApiInstance = async <T>(url: string, init?: RequestInit) => {
+export const jsonApiInstance = async <T>(
+  url: string,
+  init?: RequestInit & { json?: unknown }
+) => {
+  // можно заменить это axios!
+  let headers = init?.headers ?? {};
+  if (init?.json) {
+    headers = {
+      "Content-Type": "application/json",
+      ...headers
+    };
+
+    init.body = JSON.stringify(init.json);
+  }
   const result = await fetch(`${BASE_URL}${url}`, {
-    ...init
+    ...init,
+    headers
   });
 
   if (!result.ok) {
