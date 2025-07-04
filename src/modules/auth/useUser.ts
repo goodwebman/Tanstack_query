@@ -7,6 +7,6 @@ export const useUser = () => {
   const userId = useAppSelector(authSlice.selectors.userId);
   return useQuery({
     ...authApi.getUserById(userId!),
-    enabled: Boolean(userId)
+    enabled: Boolean(userId),
   });
 };

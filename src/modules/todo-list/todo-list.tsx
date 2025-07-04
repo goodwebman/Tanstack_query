@@ -5,21 +5,13 @@ import { useTodoList } from "./useTodoList";
 import { useToggleTodo } from "./useToggleTodo";
 
 const TodoList = () => {
-  const { error, isLoading, todoItems } = useTodoList();
+  const { todoItems } = useTodoList();
 
   const createTodo = useCreateTodo();
 
   const deleteTodo = useDeleteTodo();
   const user = useUser();
   const { toggleTodo } = useToggleTodo();
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>error: {JSON.stringify(error)}</div>;
-  }
 
   return (
     <div className="p-5 mx-auto max-w-[1200px] mt-10 ">
