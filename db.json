@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "login": "alice",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "login": "bob",
+      "password": "password456"
+    }
+  ],
   "tasks": [
     {
       "id": "1",
@@ -523,12 +535,6 @@
       "userId": "user_038"
     },
     {
-      "id": "88",
-      "text": "Pay bills",
-      "done": true,
-      "userId": "user_049"
-    },
-    {
       "id": "89",
       "text": "Buy milk",
       "done": true,
@@ -541,12 +547,6 @@
       "userId": "user_071"
     },
     {
-      "id": "91",
-      "text": "Read book",
-      "done": false,
-      "userId": "user_082"
-    },
-    {
       "id": "92",
       "text": "Send email",
       "done": false,
@@ -555,7 +555,7 @@
     {
       "id": "93",
       "text": "Call mom",
-      "done": false,
+      "done": true,
       "userId": "user_104"
     },
     {
@@ -567,200 +567,8 @@
     {
       "id": "95",
       "text": "Read book",
-      "done": false,
+      "done": true,
       "userId": "user_126"
-    },
-    {
-      "id": "96",
-      "text": "Go jogging",
-      "done": true,
-      "userId": "user_137"
-    },
-    {
-      "id": "97",
-      "text": "Book tickets",
-      "done": true,
-      "userId": "user_148"
-    },
-    {
-      "id": "98",
-      "text": "Read book",
-      "done": false,
-      "userId": "user_159"
-    },
-    {
-      "id": "99",
-      "text": "Make dinner",
-      "done": false,
-      "userId": "user_170"
-    },
-    {
-      "id": "100",
-      "text": "Check emails",
-      "done": true,
-      "userId": "user_181"
-    },
-    {
-      "id": "JfXyqbkAdQBKpCT0pm-GP",
-      "done": false,
-      "text": "Text",
-      "userId": "1"
-    },
-    {
-      "id": "lkV7imzswAdaCiyBJbIF2",
-      "done": false,
-      "text": "123123",
-      "userId": "1"
-    },
-    {
-      "id": "wr_QwcFwezF4czXi0NORw",
-      "done": false,
-      "text": "dada",
-      "userId": "1"
-    },
-    {
-      "id": "1lnrcJANzfWTO4GgZ8YhN",
-      "done": false,
-      "text": "12321",
-      "userId": "1"
-    },
-    {
-      "id": "zGlIUQBmL-MttLY4o_HMY",
-      "done": false,
-      "text": "e1e1",
-      "userId": "1"
-    },
-    {
-      "id": "wrNtYWcXnSvsNNatCP7UE",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "R1jZiTj_AIWmS3k_1t9ft",
-      "done": false,
-      "text": "f",
-      "userId": "1"
-    },
-    {
-      "id": "pFfd5O-ZffVSNy746IWk1",
-      "done": false,
-      "text": "f",
-      "userId": "1"
-    },
-    {
-      "id": "2vH2sd5sPdSOJU_RhHoTU",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "HhL-NZLJslWSepalJ0dRa",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "R-dUC58G0qnT2347fOUoH",
-      "done": false,
-      "text": "d",
-      "userId": "1"
-    },
-    {
-      "id": "GGPUp-hRGTAI3ddi2y7BN",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "NjhBQbJ9I9TBmw-jbpHDK",
-      "done": false,
-      "text": "f",
-      "userId": "1"
-    },
-    {
-      "id": "Bmhw2A4uRXDAtQEUCte2I",
-      "done": false,
-      "text": "123",
-      "userId": "1"
-    },
-    {
-      "id": "odQ3PMtz39OF8Qs4OUzC9",
-      "done": false,
-      "text": "sadasd",
-      "userId": "1"
-    },
-    {
-      "id": "MfKXfb-IyT92nLaLzvOm-",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "LWLgqo_Py8BZ8LQU3k6jY",
-      "done": false,
-      "text": "а",
-      "userId": "1"
-    },
-    {
-      "id": "cqM6dVWtyd-OF7ITqHX-l",
-      "done": false,
-      "text": "ы",
-      "userId": "1"
-    },
-    {
-      "id": "i_1wySmV5t_3UeqfGn65g",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "jZIJoY88mtyO4Qgh0FOWx",
-      "done": false,
-      "text": "2d",
-      "userId": "1"
-    },
-    {
-      "id": "RLrq5tkkSfUmjrLoXhZY_",
-      "done": false,
-      "text": "3",
-      "userId": "1"
-    },
-    {
-      "id": "4e8KyrQ2Vv3alfwCgCU5T",
-      "done": false,
-      "text": "333333333333",
-      "userId": "1"
-    },
-    {
-      "id": "vuTdNM56X1aJ4XpXOjN-D",
-      "done": false,
-      "text": "new task",
-      "userId": "1"
-    },
-    {
-      "id": "RQzXdiGRg-EdpYXIaNYFW",
-      "done": false,
-      "text": "1",
-      "userId": "1"
-    },
-    {
-      "id": "j9ICdLFXiDbhEvqsTtUL_",
-      "done": false,
-      "text": "2",
-      "userId": "1"
-    },
-    {
-      "id": "13nt3TmyjoCvuvd60EEAS",
-      "done": false,
-      "text": "3",
-      "userId": "1"
-    },
-    {
-      "id": "g8GQz22VEZa1WXyxUZOq_",
-      "done": false,
-      "text": "1",
-      "userId": "1"
     }
   ]
 }
